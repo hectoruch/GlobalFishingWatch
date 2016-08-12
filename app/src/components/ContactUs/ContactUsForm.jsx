@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import home from '../../../styles/index.scss';
+import formStyle from '../../../styles/components/c-contact-form.scss';
 
 class ContactUsForm extends Component {
   constructor(props) {
@@ -43,15 +43,19 @@ class ContactUsForm extends Component {
       } else {
         message = 'There was a problem submitting your contact request. Please try again later';
       }
-      return (<section className={home.c_contact_form}>
+      return (<section className={formStyle['c-contact-form']}>
         <h1>{message}</h1>
       </section>);
     }
 
-    return (<section className={home.c_contact_form}>
+    return (<section className={formStyle['c-contact-form']}>
       <h1>
         Contact Us
       </h1>
+      <p>
+        Let us know what you think! Submit your questions,
+        suggestions for improvement or general feedback using the form below
+      </p>
       <form
         action=""
         method="POST"
@@ -61,7 +65,7 @@ class ContactUsForm extends Component {
         <input
           type="name"
           id="contact_name"
-          placeholder="Name"
+          placeholder="Your name"
           required
           onChange={this.handleChange}
         />
@@ -70,7 +74,7 @@ class ContactUsForm extends Component {
         <input
           type="email"
           id="contact_email"
-          placeholder="email"
+          placeholder="john.sample@globalfishingwatch.org"
           required
           onChange={this.handleChange}
         />
@@ -79,15 +83,15 @@ class ContactUsForm extends Component {
         <input
           type="text"
           id="contact_company"
-          placeholder="company"
+          placeholder="Email address"
           onChange={this.handleChange}
         />
 
 
         <label htmlFor="type">Type</label>
-        <div className={home.select_container}>
+        <div className={formStyle.select_container}>
           <select id="contact_type" onChange={this.handleChange} required>
-            <option>Select an option...</option>
+            <option>Select a question type</option>
             <option value="Map">Map</option>
             <option value="Collaboration">Collaboration</option>
             <option value="Press">Press</option>
@@ -96,25 +100,18 @@ class ContactUsForm extends Component {
           </select>
         </div>
 
-        <label htmlFor="subject">Subject</label>
-        <input
+        <label htmlFor="subject">Message</label>
+        <textarea
           type="text" id="contact_subject"
-          placeholder="subject"
-          required
-          onChange={this.handleChange}
-        />
-
-        <label htmlFor="description">description</label>
-        <input
-          type="textarea"
-          id="contact_description"
-          placeholder="description"
+          placeholder="Please let us know how we can help!"
           required
           onChange={this.handleChange}
         />
 
         <input
           type="submit"
+          value="SEND"
+          className={formStyle['submit-contact']}
           disabled={this.state.submitted}
         />
       </form>
