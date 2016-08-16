@@ -61,7 +61,7 @@ class ContactUsForm extends Component {
         method="POST"
         onSubmit={this.handleFormSubmit}
       >
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Name *</label>
         <input
           type="name"
           id="contact_name"
@@ -70,7 +70,7 @@ class ContactUsForm extends Component {
           onChange={this.handleChange}
         />
 
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email *</label>
         <input
           type="email"
           id="contact_email"
@@ -83,12 +83,12 @@ class ContactUsForm extends Component {
         <input
           type="text"
           id="contact_company"
-          placeholder="Email address"
+          placeholder="Your company's name"
           onChange={this.handleChange}
         />
 
 
-        <label htmlFor="type">Type</label>
+        <label htmlFor="type">Type *</label>
         <div className={formStyle['select-container']}>
           <select id="contact_type" onChange={this.handleChange} required>
             <option>Select a question type</option>
@@ -100,10 +100,20 @@ class ContactUsForm extends Component {
           </select>
         </div>
 
-        <label htmlFor="subject">Message</label>
+        <label htmlFor="subject">Subject *</label>
+        <input
+          type="text"
+          id="contact_subject"
+          placeholder="Tell us the subject of your contact"
+          required
+          onChange={this.handleChange}
+        />
+
+        <label htmlFor="description">Message *</label>
         <textarea
-          type="text" id="contact_subject"
-          placeholder="Please let us know how we can help!"
+          type="text"
+          id="contact_description"
+          placeholder="Give us more details"
           required
           onChange={this.handleChange}
         />
