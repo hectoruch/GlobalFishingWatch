@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import CoverPrimary from './Shared/CoverPrimary';
+import Header from '../containers/Header';
 import Footer from './Shared/Footer';
 import ContactUsForm from './ContactUs/ContactUsForm';
+import contactStyle from '../../styles/components/c-contact.scss';
 
 class ContactUs extends Component {
 
   render() {
-    return (<div>
-      <CoverPrimary
-        title="Contact Us"
-        subtitle="Let us know what you think! Submit your questions, suggestions
-        for improvement or general feedback using the form below"
-      />
-      <ContactUsForm onFormSubmit={this.props.submitForm} contactStatus={this.props.contactStatus} />
+    return (<div className={contactStyle['c-contact']}>
+      <div className={contactStyle['layer-cover']}>
+        <Header />
+        <ContactUsForm onFormSubmit={this.props.submitForm} contactStatus={this.props.contactStatus} />
+      </div>
       <Footer />
     </div>);
   }

@@ -89,7 +89,7 @@ class ContactUsForm extends Component {
 
 
         <label htmlFor="type">Type</label>
-        <div className={formStyle.select_container}>
+        <div className={formStyle['select-container']}>
           <select id="contact_type" onChange={this.handleChange} required>
             <option>Select a question type</option>
             <option value="Map">Map</option>
