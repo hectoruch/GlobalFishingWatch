@@ -62,24 +62,24 @@
       transform: rotate(-45deg);
       width: 10px;
     }
-  }
 
-  select {
-    -moz-appearance: none;
-    -webkit-appearance:none;
-    background-color: $color-4;
-    border: solid 1px $color-10;
-    border-radius: 0;
-    color: $color-5;
-    cursor: pointer;
-    font-size: $font-size-small;
-    height: 40px;
-    margin-bottom: 10px;
-    outline: 0;
-    padding: 10px;
+    select {
+      -moz-appearance: none;
+      -webkit-appearance:none;
+      background-color: $color-4;
+      border: solid 1px $color-10;
+      border-radius: 0;
+      color: $color-5;
+      cursor: pointer;
+      font-size: $font-size-small;
+      height: 40px;
+      margin-bottom: 10px;
+      outline: 0;
+      padding: 10px;
 
-    &::-ms-expand {
-      display: none;
+      &::-ms-expand {
+        display: none;
+      }
     }
   }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 import formStyle from '../../../styles/components/c-contact-form.scss';
 import buttonStyle from '../../../styles/components/c-button.scss';
 
@@ -7,7 +8,8 @@ class ContactUsForm extends Component {
     super(props);
     this.state = {
       submitted: false,
-      showFormResponse: false
+      showFormResponse: false,
+      colorSelect: '#b8b8b8'
     };
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -37,6 +39,11 @@ class ContactUsForm extends Component {
   }
 
   render() {
+    $(document).on('change', '#contact_type', () => {
+      this.setState({
+        colorSelect: '#000'
+      });
+    });
     if (this.state.showFormResponse) {
       let message;
       if (this.props.contactStatus === 200) {
@@ -94,7 +101,7 @@ class ContactUsForm extends Component {
 
         <label htmlFor="type">Type *</label>
         <div className={formStyle['select-container']}>
-          <select id="contact_type" onChange={this.handleChange} required>
+          <select id="contact_type" onChange={this.handleChange} style={{ color: this.state.colorSelect }} required>
             <option>Select a question type</option>
             <option value="Map">Map</option>
             <option value="Collaboration">Collaboration</option>
