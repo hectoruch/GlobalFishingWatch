@@ -52,7 +52,7 @@ class ContactUsForm extends Component {
       } else {
         message = 'There was a problem submitting your contact request. Please try again later';
       }
-      return (<section className={formStyle['c-contact-form']}>
+      return (<section className={[formStyle['c-contact-form'], formStyle['message-after']].join(' ')}>
         <h1>{message}</h1>
       </section>);
     }
