@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import formStyle from '../../../styles/components/c-contact-form.scss';
+import buttonStyle from '../../../styles/components/c-button.scss';
 
 class ContactUsForm extends Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class ContactUsForm extends Component {
           type="name"
           id="contact_name"
           placeholder="Your name"
+          className={formStyle['input-text']}
           required
           onChange={this.handleChange}
         />
@@ -75,6 +77,7 @@ class ContactUsForm extends Component {
           type="email"
           id="contact_email"
           placeholder="john.sample@globalfishingwatch.org"
+          className={formStyle['input-text']}
           required
           onChange={this.handleChange}
         />
@@ -84,6 +87,7 @@ class ContactUsForm extends Component {
           type="text"
           id="contact_company"
           placeholder="Your company's name"
+          className={formStyle['input-text']}
           onChange={this.handleChange}
         />
 
@@ -105,15 +109,16 @@ class ContactUsForm extends Component {
           type="text"
           id="contact_subject"
           placeholder="Tell us the subject of your contact"
+          className={formStyle['input-text']}
           required
           onChange={this.handleChange}
         />
 
         <label htmlFor="description">Message *</label>
         <textarea
-          type="text"
           id="contact_description"
           placeholder="Give us more details"
+          className={formStyle['textarea-form']}
           required
           onChange={this.handleChange}
         />
@@ -121,7 +126,7 @@ class ContactUsForm extends Component {
         <input
           type="submit"
           value="SEND"
-          className={formStyle['submit-contact']}
+          className={buttonStyle['c-button-contact']}
           disabled={this.state.submitted}
         />
       </form>

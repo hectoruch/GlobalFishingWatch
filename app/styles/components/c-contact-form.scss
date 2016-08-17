@@ -3,7 +3,9 @@
 .c-contact-form {
   margin: 0 auto;
   max-width: 480px;
+  position: relative;
   width: 100%;
+
 
   h1 {
     color: $color-4;
@@ -22,9 +24,9 @@
   }
 
   label,
-  input,
   textarea,
-  select {
+  select,
+  .input-text {
     color: $color-9;
     display: block;
     width: 100%;
@@ -37,7 +39,7 @@
     text-transform: uppercase;
   }
 
-  input {
+  .input-text {
     background-color: $color-4;
     border: solid 1px $color-10;
     margin-bottom: 10px;
@@ -91,18 +93,6 @@
     padding: 10px;
   }
 
-  .submit-contact {
-    background-color: $color-3;
-    border: 0;
-    color: $color-4;
-    font-size: $font-size-normal;
-    margin: 50px auto 100px;
-    max-width: 250px;
-    padding: 20px 0;
-    text-transform: uppercase;
-    width: 100%;
-  }
-
   ::-webkit-input-placeholder {
     color: $color-5;
     font-size: $font-size-small;
@@ -117,5 +107,4 @@
     color: $color-5;
     font-size: $font-size-small;
   }
-
 }

@@ -5,12 +5,23 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: initial;
+  min-height: 100%;
+  padding-bottom: 100px;
+  position: relative;
 
-  .layer-cover {
+  &::after {
     background-color: rgba($color-7, .8);
-    height: 100%;
+    bottom: 0;
+    content: '';
     left: 0;
+    position: absolute;
+    right: 0;
     top: 0;
-    width: 100%;
+
+    z-index: 1;
+    }
+
+  &>* {
+    z-index: 10;
   }
 }

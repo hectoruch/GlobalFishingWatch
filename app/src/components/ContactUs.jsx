@@ -7,8 +7,8 @@ import contactStyle from '../../styles/components/c-contact.scss';
 class ContactUs extends Component {
 
   render() {
-    return (<div className={contactStyle['c-contact']}>
-      <div className={contactStyle['layer-cover']}>
+    return (<div>
+      <div className={contactStyle['c-contact']}>
         <Header />
         <ContactUsForm onFormSubmit={this.props.submitForm} contactStatus={this.props.contactStatus} />
       </div>
