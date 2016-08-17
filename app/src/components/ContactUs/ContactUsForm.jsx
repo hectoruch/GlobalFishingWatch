@@ -109,7 +109,7 @@ class ContactUsForm extends Component {
             id="contact_type"
             onChange={this.handleChange}
             name="selectCompany"
-            style={{ color: this.state.colorSelect }}
+            className={formStyle[this.state.classSelect]}
             required
           >
             <option disabled={this.state.disabledOption}>Select a question type</option>
