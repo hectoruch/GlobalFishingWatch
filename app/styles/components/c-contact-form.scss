@@ -99,6 +99,10 @@
         display: none;
       }
     }
+
+    .select-selected {
+      color: $color-12;
+    }
   }
 
   textarea {

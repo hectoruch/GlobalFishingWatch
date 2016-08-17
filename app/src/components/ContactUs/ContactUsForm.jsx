@@ -8,7 +8,7 @@ class ContactUsForm extends Component {
     this.state = {
       submitted: false,
       showFormResponse: false,
-      colorSelect: '#b8b8b8',
+      classSelect: '',
       disabledOption: false
     };
 
@@ -26,7 +26,7 @@ class ContactUsForm extends Component {
   handleChange(event) {
     if (event.target.name === 'selectCompany') {
       this.setState({
-        colorSelect: '#000',
+        classSelect: 'select-selected',
         disabledOption: true
       });
     }
@@ -106,7 +106,7 @@ class ContactUsForm extends Component {
             id="contact_type"
             onChange={this.handleChange}
             name="selectCompany"
-            style={{ color: this.state.colorSelect }}
+            className={formStyle[this.state.classSelect]}
             required
           >
             <option disabled={this.state.disabledOption}>Select a question type</option>
