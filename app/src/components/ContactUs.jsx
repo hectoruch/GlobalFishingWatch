@@ -4,6 +4,7 @@ import Footer from './Shared/Footer';
 import ContactUsForm from './ContactUs/ContactUsForm';
 
 import contactStyle from '../../styles/components/c-contact.scss';
+import baseStyle from '../../styles/_base.scss';
 
 class ContactUs extends Component {
 
@@ -11,7 +12,9 @@ class ContactUs extends Component {
     return (<div>
       <div className={contactStyle['c-contact']}>
         <Header />
-        <ContactUsForm onFormSubmit={this.props.submitForm} contactStatus={this.props.contactStatus} />
+        <div className={baseStyle.wrap}>
+          <ContactUsForm onFormSubmit={this.props.submitForm} contactStatus={this.props.contactStatus} />
+        </div>
       </div>
       <Footer />
     </div>);
