@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../containers/Header';
 import Footer from './Shared/Footer';
 import ContactUsForm from './ContactUs/ContactUsForm';
+
 import contactStyle from '../../styles/components/c-contact.scss';
 
 class ContactUs extends Component {

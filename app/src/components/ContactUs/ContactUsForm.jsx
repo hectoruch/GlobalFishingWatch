@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import formStyle from '../../../styles/components/c-contact-form.scss';
+
 import buttonStyle from '../../../styles/components/c-button.scss';
+
 
 class ContactUsForm extends Component {
   constructor(props) {
@@ -52,6 +54,7 @@ class ContactUsForm extends Component {
       } else {
         message = 'There was a problem submitting your contact request. Please try again later';
       }
+
       return (<section className={[formStyle['c-contact-form'], formStyle['message-after']].join(' ')}>
         <h1>{message}</h1>
       </section>);
@@ -100,16 +103,10 @@ class ContactUsForm extends Component {
         />
 
 
-        <label htmlFor="type">Type *</label>
-        <div className={formStyle['select-container']}>
-          <select
-            id="contact_type"
-            onChange={this.handleChange}
-            name="selectCompany"
-            className={formStyle[this.state.classSelect]}
-            required
-          >
-            <option disabled={this.state.disabledOption}>Select a question type</option>
+        <label htmlFor="type">Type</label>
+        <div className={formStyle.select_container}>
+          <select id="contact_type" onChange={this.handleChange} required>
+            <option>Select a question type</option>
             <option value="Map">Map</option>
             <option value="Collaboration">Collaboration</option>
             <option value="Press">Press</option>
