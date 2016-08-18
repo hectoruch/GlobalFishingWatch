@@ -112,7 +112,7 @@ class ContactUsForm extends Component {
             style={{ color: this.state.colorSelect }}
             required
           >
-            <option>Select a question type</option>
+            <option disabled={this.state.disabledOption}>Select a question type</option>
             <option value="Map">Map</option>
             <option value="Collaboration">Collaboration</option>
             <option value="Press">Press</option>
